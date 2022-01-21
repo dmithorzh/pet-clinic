@@ -21,7 +21,7 @@
         <java.version>11</java.version>
     </properties>
     <scm>
-            <developerConnection>scm:git:git://github.com/dmithorzh/pet-clinic</developerConnection>
+            <developerConnection>scm:git:https://github.com/dmithorzh/pet-clinic.git</developerConnection>
     </scm>
 
     <build>
