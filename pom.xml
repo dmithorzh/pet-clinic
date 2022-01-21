@@ -22,7 +22,6 @@
     </properties>
     <scm>
             <developerConnection>scm:git:https://github.com/dmithorzh/pet-clinic.git</developerConnection>
-        <tag>pet-clinic-0.0.1</tag>
     </scm>
 
     <build>
