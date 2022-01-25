@@ -1,11 +1,8 @@
 package com.example.petclinic.services;
+
 import com.example.petclinic.model.Vet;
 
 
-public interface VetService {
-    Vet findById (Long id);
+public interface VetService extends CrudService<Vet, Long> {
 
-    Vet save (Vet vet);
-
-    Set<Vet> findAll ();
 }
