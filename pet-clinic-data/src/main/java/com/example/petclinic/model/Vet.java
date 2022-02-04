@@ -1,4 +1,19 @@
 package com.example.petclinic.model;
 
+import java.util.Set;
+
+/**
+ * Created by Dim@$$ik
+ */
 public class Vet extends Person{
+
+    private Set<Speciality> specialities;
+
+    public Set<Speciality> getSpecialities() {
+        return specialities;
+    }
+
+    public void setSpecialities(Set<Speciality> specialities) {
+        this.specialities = specialities;
+    }
 }
