@@ -3,7 +3,7 @@ package com.example.petclinic.model;
 /**
  * Сreated by Dim@$$ik
  */
-public class Speciality extends BaseEntity{
+public class Specialty extends BaseEntity{
 
     private String description;
 
