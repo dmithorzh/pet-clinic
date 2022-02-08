@@ -1,10 +1,7 @@
 package com.example.petclinic.bootstrap;
 
 import com.example.petclinic.model.*;
-import com.example.petclinic.services.OwnerService;
-import com.example.petclinic.services.PetTypeService;
-import com.example.petclinic.services.SpecialtyService;
-import com.example.petclinic.services.VetService;
+import com.example.petclinic.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -17,12 +14,15 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialtyService specialtyService;
+    private final VisitService visitService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService specialtyService){
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService,
+                      SpecialtyService specialtyService, VisitService visitService){
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialtyService = specialtyService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -84,7 +84,19 @@ public class DataLoader implements CommandLineRunner {
 
         ownerService.save(owner2);
 
+        Visit cocodriloVisit = new Visit();
+        cocodriloVisit.setPet(gariksPet);
+        cocodriloVisit.setDate(LocalDate.now());
+        cocodriloVisit.setDescription("Yasheritsa covidom zabolela");
+
+
+        Visit abobusVisit = new Visit();
+        abobusVisit.setPet(dimassPet);
+        abobusVisit.setDate(LocalDate.now());
+        abobusVisit.setDescription("SUS have visited vet-clinic");
+
         System.out.println("Zagruzil ownerow =)");
+
 
         Vet vet1 = new Vet();
         vet1.setFirstName("Amogus");
