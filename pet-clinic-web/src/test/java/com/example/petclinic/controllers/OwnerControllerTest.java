@@ -135,7 +135,7 @@ class OwnerControllerTest {
                 .andExpect(view().name("owners/createOrUpdateOwnerForm"))
                 .andExpect(model().attributeExists("owner"));
 
-        verifyNoInteractions(ownerService);
+        verifyNoMoreInteractions(ownerService);
     }
 
     @Test
